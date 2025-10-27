@@ -1,0 +1,6 @@
+tx_id,date,amount,currency,merchant,category,description,type
+1,2025-08-01,45.23,USD,Uber,Transport,"Ride to work",debit
+2,2025-08-02,12.50,USD,Starbucks,Food,"Morning coffee",debit
+3,2025-08-03,150.00,USD,Amazon,Shopping,"Electronics accessories",debit
+4,2025-08-05,300.00,USD,Employer,Salary,"Monthly salary",credit
+5,2025-08-06,25.00,USD,Netflix,Entertainment,"Monthly subscription",debit

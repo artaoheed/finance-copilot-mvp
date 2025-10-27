@@ -1,0 +1,16 @@
+# Core dependencies
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+openai
+python-dotenv
+
+# Frontend
+streamlit
+requests
+
+# Optional
+matplotlib
+plotly
