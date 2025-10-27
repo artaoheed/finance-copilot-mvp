@@ -1,0 +1,596 @@
+tx_id,date,amount,currency,merchant,category,description,type
+ea3f6f18,2025-03-31,95.16,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+b0532ad7,2025-04-01,78.65,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+ac37aac1,2025-04-01,96.54,USD,Target,Shopping,Shopping payment at Target,debit
+f95bde46,2025-04-01,91.76,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+10dead2f,2025-04-01,111.45,USD,Costco,Groceries,Groceries payment at Costco,debit
+acea2b32,2025-04-02,28.21,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+7bd4d59a,2025-04-02,43.33,USD,Lyft,Transport,Transport payment at Lyft,debit
+cd44983c,2025-04-02,34.69,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+60283a0a,2025-04-03,11.75,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+e87af690,2025-04-03,90.01,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+7e4a89e8,2025-04-03,96.98,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+4b4917e9,2025-04-03,186.37,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+ce0d50a4,2025-04-04,109.59,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+3fc336e9,2025-04-04,7.2,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+22e273d2,2025-04-04,117.52,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+1180ff5d,2025-04-04,45.48,USD,Lyft,Transport,Transport payment at Lyft,debit
+28a8416c,2025-04-05,19.22,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+be055d82,2025-04-06,60.87,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+1b705902,2025-04-07,15.46,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+ea7a4760,2025-04-07,31.53,USD,Uber,Transport,Transport payment at Uber,debit
+18b2f43b,2025-04-08,288.27,USD,AT&T,Bills,Bills payment at AT&T,debit
+4f629ff9,2025-04-08,19.57,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+a920e6a8,2025-04-08,42.44,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+3fc9305b,2025-04-08,83.0,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+aff428ef,2025-04-08,44.22,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+29a06e4a,2025-04-09,146.45,USD,Costco,Groceries,Groceries payment at Costco,debit
+d4d318e6,2025-04-09,86.19,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+990dbd5a,2025-04-09,22.65,USD,Uber,Transport,Transport payment at Uber,debit
+38f88428,2025-04-10,14.47,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+f4a350ba,2025-04-10,14.98,USD,Uber,Transport,Transport payment at Uber,debit
+1df1e23e,2025-04-10,10.94,USD,Chipotle,Food,Food payment at Chipotle,debit
+d243c2bd,2025-04-10,51.03,USD,Lyft,Transport,Transport payment at Lyft,debit
+c939841c,2025-04-10,178.14,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+f872aec5,2025-04-10,32.25,USD,Chipotle,Food,Food payment at Chipotle,debit
+d419e18a,2025-04-11,19.09,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+f82df02d,2025-04-11,26.0,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+8f72716b,2025-04-11,6.4,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+d5ac51ea,2025-04-11,85.94,USD,Target,Shopping,Shopping payment at Target,debit
+fd234611,2025-04-11,152.01,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+7eb20a20,2025-04-12,23.18,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+315c47ec,2025-04-12,9.29,USD,Starbucks,Food,Food payment at Starbucks,debit
+2d144ceb,2025-04-12,113.5,USD,Verizon,Bills,Bills payment at Verizon,debit
+8781e1a9,2025-04-12,38.49,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+ee290b7b,2025-04-12,140.51,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+c4076cef,2025-04-12,156.1,USD,AT&T,Bills,Bills payment at AT&T,debit
+671e2924,2025-04-13,9.77,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+a67331ce,2025-04-14,53.78,USD,Uber,Transport,Transport payment at Uber,debit
+2d2c5259,2025-04-14,14.05,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+bf846730,2025-04-16,166.03,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+f030a729,2025-04-16,86.87,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+5fa7d08c,2025-04-16,15.3,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+760999dd,2025-04-16,208.64,USD,AT&T,Bills,Bills payment at AT&T,debit
+c0934419,2025-04-17,9.9,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+edad226e,2025-04-17,198.07,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+733d57ae,2025-04-18,17.55,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+6ba30d81,2025-04-19,62.11,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+bf753317,2025-04-19,15.8,USD,Uber,Transport,Transport payment at Uber,debit
+90192578,2025-04-20,10.38,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+366e7e28,2025-04-20,164.92,USD,Verizon,Bills,Bills payment at Verizon,debit
+dea63c98,2025-04-20,20.43,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+23fd5bda,2025-04-20,12.59,USD,Starbucks,Food,Food payment at Starbucks,debit
+f34a6f45,2025-04-21,47.0,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+8d04d5e1,2025-04-22,13.79,USD,KFC,Food,Food payment at KFC,debit
+063a54b5,2025-04-22,37.15,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+3778d6bb,2025-04-22,114.25,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+b5bcdc3e,2025-04-23,32.1,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+515aebfb,2025-04-23,153.61,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+69158b40,2025-04-23,95.16,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+c8571ba9,2025-04-24,44.04,USD,Uber,Transport,Transport payment at Uber,debit
+56b81df5,2025-04-25,81.8,USD,Comcast,Bills,Bills payment at Comcast,debit
+b256b9bf,2025-04-25,110.83,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+a02c533e,2025-04-25,44.49,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+875a1f5b,2025-04-25,36.8,USD,McDonald's,Food,Food payment at McDonald's,debit
+5a46afed,2025-04-25,25.42,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+e1278a87,2025-04-25,163.35,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+318cde4a,2025-04-26,5.9,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+9c9bf385,2025-04-26,199.65,USD,AT&T,Bills,Bills payment at AT&T,debit
+6634b4c4,2025-04-26,57.3,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+3cfb84f1,2025-04-27,28.08,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+13ca2308,2025-04-27,30.02,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+228be32f,2025-04-27,66.09,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+def73048,2025-04-27,135.85,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+c78df00c,2025-04-28,103.61,USD,Target,Shopping,Shopping payment at Target,debit
+28295b0b,2025-04-28,57.24,USD,AT&T,Bills,Bills payment at AT&T,debit
+f642b991,2025-04-28,29.72,USD,Starbucks,Food,Food payment at Starbucks,debit
+d376aec4,2025-04-28,77.07,USD,Target,Shopping,Shopping payment at Target,debit
+5f043582,2025-04-29,39.3,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+a5758386,2025-04-29,165.62,USD,Verizon,Bills,Bills payment at Verizon,debit
+017495b9,2025-04-29,32.72,USD,Chipotle,Food,Food payment at Chipotle,debit
+1729af69,2025-04-29,104.12,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+3568f765,2025-04-29,19.34,USD,Starbucks,Food,Food payment at Starbucks,debit
+28ac97c5,2025-04-30,164.97,USD,Target,Shopping,Shopping payment at Target,debit
+1fd41b42,2025-04-30,41.98,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+1e379e65,2025-05-01,132.31,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+69dee985,2025-05-01,13.79,USD,Chipotle,Food,Food payment at Chipotle,debit
+71dd771c,2025-05-02,138.88,USD,Comcast,Bills,Bills payment at Comcast,debit
+96194239,2025-05-02,19.22,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+ef6f8cdc,2025-05-02,58.25,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+b8eb8e62,2025-05-02,47.45,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+6e288a20,2025-05-02,80.17,USD,Target,Shopping,Shopping payment at Target,debit
+c49ae14f,2025-05-02,134.3,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+c5881686,2025-05-03,129.42,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+b4bd6258,2025-05-03,195.19,USD,AT&T,Bills,Bills payment at AT&T,debit
+2f7e0b97,2025-05-03,16.79,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+9c1ce40b,2025-05-03,22.76,USD,Costco,Groceries,Groceries payment at Costco,debit
+89173006,2025-05-04,5.36,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+02b4926d,2025-05-05,22.16,USD,Chipotle,Food,Food payment at Chipotle,debit
+34a5c590,2025-05-06,65.73,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+cd47c307,2025-05-06,104.48,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+3cdc7c96,2025-05-06,35.89,USD,Lyft,Transport,Transport payment at Lyft,debit
+08b734b1,2025-05-07,13.3,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+43e69cbf,2025-05-07,14.65,USD,Starbucks,Food,Food payment at Starbucks,debit
+31b1a431,2025-05-07,236.35,USD,Comcast,Bills,Bills payment at Comcast,debit
+1214b71a,2025-05-07,35.96,USD,Uber,Transport,Transport payment at Uber,debit
+709d37f2,2025-05-07,26.9,USD,Starbucks,Food,Food payment at Starbucks,debit
+6c3ecbea,2025-05-07,250.3,USD,AT&T,Bills,Bills payment at AT&T,debit
+119a0c19,2025-05-09,48.59,USD,Costco,Groceries,Groceries payment at Costco,debit
+98172c7e,2025-05-11,35.14,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+3e398361,2025-05-12,67.3,USD,Costco,Groceries,Groceries payment at Costco,debit
+53f58151,2025-05-13,1583.28,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+84499621,2025-05-13,33.6,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+cbecf507,2025-05-13,52.41,USD,Costco,Groceries,Groceries payment at Costco,debit
+26335cdc,2025-05-13,23.7,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+c79a7578,2025-05-13,24.51,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+34fcc0d1,2025-05-14,68.24,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+9268a2c4,2025-05-14,30.31,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+22373979,2025-05-14,185.15,USD,Target,Shopping,Shopping payment at Target,debit
+96b8b287,2025-05-15,19.03,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+bfe08171,2025-05-15,16.97,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+07b700c0,2025-05-15,33.35,USD,Lyft,Transport,Transport payment at Lyft,debit
+a51bc507,2025-05-16,30.35,USD,Chipotle,Food,Food payment at Chipotle,debit
+07c4cb50,2025-05-16,174.2,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+7a314fab,2025-05-16,36.07,USD,KFC,Food,Food payment at KFC,debit
+c2d6cce8,2025-05-17,18.35,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+64f7d716,2025-05-19,192.77,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+6bc80998,2025-05-19,38.72,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+047f1e2b,2025-05-19,143.51,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+bf790e3b,2025-05-20,56.19,USD,Lyft,Transport,Transport payment at Lyft,debit
+1bba0617,2025-05-20,82.63,USD,Costco,Groceries,Groceries payment at Costco,debit
+a4910902,2025-05-20,28.85,USD,KFC,Food,Food payment at KFC,debit
+6a15bdda,2025-05-21,102.13,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+4491f124,2025-05-22,11.87,USD,Chipotle,Food,Food payment at Chipotle,debit
+a5078ab4,2025-05-22,34.63,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+34cf0994,2025-05-22,49.06,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+794bc389,2025-05-22,145.22,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+c8c01307,2025-05-22,23.44,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+d5918475,2025-05-22,185.89,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+2d79906c,2025-05-23,236.55,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+1018a94d,2025-05-23,27.56,USD,KFC,Food,Food payment at KFC,debit
+6321adf8,2025-05-25,32.94,USD,Lyft,Transport,Transport payment at Lyft,debit
+5776010b,2025-05-25,30.5,USD,McDonald's,Food,Food payment at McDonald's,debit
+7bd40a41,2025-05-25,17.57,USD,McDonald's,Food,Food payment at McDonald's,debit
+33561d4a,2025-05-26,26.49,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+e10c9519,2025-05-26,31.1,USD,McDonald's,Food,Food payment at McDonald's,debit
+3eaa0b58,2025-05-27,182.49,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+bb21cdaf,2025-05-27,178.0,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+efbb37ea,2025-05-27,2115.04,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+bca92d34,2025-05-28,21.27,USD,Chipotle,Food,Food payment at Chipotle,debit
+7c3f7b84,2025-05-29,19.22,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+32a44eb3,2025-05-29,30.68,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+4c10b258,2025-05-29,36.62,USD,KFC,Food,Food payment at KFC,debit
+2c2b91f2,2025-05-30,42.6,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+175911be,2025-05-30,32.88,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+7e2cbbe0,2025-05-30,13.11,USD,Chipotle,Food,Food payment at Chipotle,debit
+c3bf3d8c,2025-05-30,56.69,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+63ac46a2,2025-05-30,40.91,USD,Target,Shopping,Shopping payment at Target,debit
+b394bf3f,2025-05-30,21.3,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+c786abf5,2025-05-31,203.63,USD,Comcast,Bills,Bills payment at Comcast,debit
+1df87dac,2025-05-31,39.66,USD,KFC,Food,Food payment at KFC,debit
+adf4bb71,2025-05-31,91.87,USD,Costco,Groceries,Groceries payment at Costco,debit
+c82fdd14,2025-06-01,21.73,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+7a932b0e,2025-06-01,56.3,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+8ba508b6,2025-06-02,2801.25,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+7910d0f9,2025-06-02,56.17,USD,Comcast,Bills,Bills payment at Comcast,debit
+5330d523,2025-06-02,23.98,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+be604cb3,2025-06-03,97.84,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+b192a707,2025-06-03,2063.29,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+32b024eb,2025-06-03,31.25,USD,Lyft,Transport,Transport payment at Lyft,debit
+5082ec66,2025-06-03,173.91,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+09af62ee,2025-06-03,36.44,USD,Starbucks,Food,Food payment at Starbucks,debit
+e7485131,2025-06-03,2073.4,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+c7adfddf,2025-06-04,28.46,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+80001ab1,2025-06-04,15.6,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+d69c88cc,2025-06-05,1532.07,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+bf14c816,2025-06-05,36.56,USD,Uber,Transport,Transport payment at Uber,debit
+4c75adef,2025-06-05,18.05,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+d7fa108d,2025-06-05,1906.3,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+661263eb,2025-06-07,95.98,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+f927c872,2025-06-07,15.95,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+b1a73d15,2025-06-07,104.83,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+6732a22e,2025-06-07,8.12,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+fc350451,2025-06-08,24.92,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+127db812,2025-06-08,27.76,USD,Starbucks,Food,Food payment at Starbucks,debit
+0be51019,2025-06-08,134.35,USD,Costco,Groceries,Groceries payment at Costco,debit
+34f90cd6,2025-06-08,168.39,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+f976ce50,2025-06-08,142.82,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+6d3b453a,2025-06-08,29.31,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+603f7c83,2025-06-08,67.41,USD,Costco,Groceries,Groceries payment at Costco,debit
+728451b1,2025-06-09,32.77,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+b5df23a9,2025-06-09,96.9,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+9acc84e1,2025-06-09,39.0,USD,Lyft,Transport,Transport payment at Lyft,debit
+f90ce485,2025-06-09,58.73,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+042de72c,2025-06-10,36.6,USD,McDonald's,Food,Food payment at McDonald's,debit
+5a277ed3,2025-06-10,119.52,USD,Costco,Groceries,Groceries payment at Costco,debit
+114bb83d,2025-06-10,97.91,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+516c81d3,2025-06-10,7.25,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+fc266658,2025-06-11,2899.06,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+bd585be0,2025-06-11,44.48,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+ee42810e,2025-06-11,35.11,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+34dc821e,2025-06-12,70.99,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+32830572,2025-06-12,56.97,USD,Target,Shopping,Shopping payment at Target,debit
+6cb725ee,2025-06-12,195.26,USD,Verizon,Bills,Bills payment at Verizon,debit
+33844ce4,2025-06-12,49.82,USD,Lyft,Transport,Transport payment at Lyft,debit
+395e118a,2025-06-12,92.6,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+875aee37,2025-06-13,1741.19,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+2b311870,2025-06-14,40.37,USD,Costco,Groceries,Groceries payment at Costco,debit
+a9c6f8c6,2025-06-14,193.33,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+c4abc213,2025-06-15,14.68,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+34601344,2025-06-15,14.16,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+b139f51a,2025-06-16,8.39,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+5b5224bc,2025-06-16,39.11,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+61b71435,2025-06-17,5.82,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+5030be77,2025-06-17,8.1,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+6dcac11e,2025-06-17,26.93,USD,Lyft,Transport,Transport payment at Lyft,debit
+e9d55828,2025-06-18,14.29,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+3db5e1d9,2025-06-18,8.95,USD,KFC,Food,Food payment at KFC,debit
+bd44fda8,2025-06-18,28.23,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+e7cd32bc,2025-06-18,2513.54,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+4c673070,2025-06-18,76.33,USD,Costco,Groceries,Groceries payment at Costco,debit
+99796910,2025-06-19,12.38,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+bb818702,2025-06-19,25.91,USD,KFC,Food,Food payment at KFC,debit
+f0adc0e7,2025-06-19,18.03,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+f01e8957,2025-06-19,161.54,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+f24ddaea,2025-06-20,2277.66,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+cbb218e7,2025-06-20,6.73,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+088eb506,2025-06-20,143.44,USD,Costco,Groceries,Groceries payment at Costco,debit
+9a875da7,2025-06-21,142.96,USD,Target,Shopping,Shopping payment at Target,debit
+6bdfff30,2025-06-22,183.3,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+61cf550b,2025-06-24,28.16,USD,McDonald's,Food,Food payment at McDonald's,debit
+197adc3b,2025-06-25,18.61,USD,McDonald's,Food,Food payment at McDonald's,debit
+bd6206b2,2025-06-25,26.99,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+326a131b,2025-06-25,2000.76,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+d8306d49,2025-06-26,8.47,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+5c67b058,2025-06-26,39.34,USD,Uber,Transport,Transport payment at Uber,debit
+aa34275b,2025-06-27,26.23,USD,Chipotle,Food,Food payment at Chipotle,debit
+a1abdd64,2025-06-27,42.64,USD,Lyft,Transport,Transport payment at Lyft,debit
+290be634,2025-06-28,180.93,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+c9e4c3b9,2025-06-28,1928.77,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+34b9ef6b,2025-06-28,34.8,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+fa873cdb,2025-06-28,10.98,USD,Starbucks,Food,Food payment at Starbucks,debit
+08f8bb9b,2025-06-29,47.77,USD,Uber,Transport,Transport payment at Uber,debit
+b4f24045,2025-06-29,21.74,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+2dd6194a,2025-06-30,120.98,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+9bd6678e,2025-07-01,36.54,USD,KFC,Food,Food payment at KFC,debit
+939fe1a0,2025-07-02,187.1,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+56148084,2025-07-02,2997.61,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+59a78165,2025-07-02,19.44,USD,Lyft,Transport,Transport payment at Lyft,debit
+94288f26,2025-07-02,249.65,USD,Comcast,Bills,Bills payment at Comcast,debit
+8b158df5,2025-07-03,130.98,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+3b03f603,2025-07-03,103.87,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+02ebf0b4,2025-07-03,92.2,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+d2a6cb5f,2025-07-04,292.9,USD,AT&T,Bills,Bills payment at AT&T,debit
+d4142a0f,2025-07-05,120.62,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+e9a6bc63,2025-07-05,17.89,USD,Uber,Transport,Transport payment at Uber,debit
+c5400cc9,2025-07-05,44.3,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+d44d5ace,2025-07-06,142.96,USD,AT&T,Bills,Bills payment at AT&T,debit
+ec5777dd,2025-07-06,118.95,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+29c85931,2025-07-06,143.55,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+151cd9d6,2025-07-06,37.6,USD,KFC,Food,Food payment at KFC,debit
+e5b5076f,2025-07-07,14.55,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+ed37db11,2025-07-07,52.48,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+a39c2ff6,2025-07-08,7.23,USD,Starbucks,Food,Food payment at Starbucks,debit
+77ee1ed3,2025-07-09,24.11,USD,Chipotle,Food,Food payment at Chipotle,debit
+264a4b16,2025-07-10,140.15,USD,Verizon,Bills,Bills payment at Verizon,debit
+14434089,2025-07-10,36.33,USD,Starbucks,Food,Food payment at Starbucks,debit
+aa8b23e4,2025-07-10,17.09,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+9fde4418,2025-07-11,9.17,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+a1f61a10,2025-07-11,22.94,USD,Lyft,Transport,Transport payment at Lyft,debit
+6e69a83e,2025-07-11,39.82,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+d800f7fb,2025-07-12,6.51,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+d7cbdc49,2025-07-14,122.24,USD,Verizon,Bills,Bills payment at Verizon,debit
+5e545b55,2025-07-14,71.69,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+8323d231,2025-07-14,109.49,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+9c87dd7c,2025-07-15,19.53,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+12d6d7d3,2025-07-15,20.9,USD,McDonald's,Food,Food payment at McDonald's,debit
+3e05db24,2025-07-15,28.36,USD,Starbucks,Food,Food payment at Starbucks,debit
+f614afca,2025-07-16,37.93,USD,Starbucks,Food,Food payment at Starbucks,debit
+f104a1d9,2025-07-16,26.24,USD,Chipotle,Food,Food payment at Chipotle,debit
+516efd90,2025-07-16,190.75,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+ccf42aca,2025-07-17,9.64,USD,McDonald's,Food,Food payment at McDonald's,debit
+05e58f9d,2025-07-17,14.02,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+1172234e,2025-07-17,14.24,USD,Chipotle,Food,Food payment at Chipotle,debit
+ccc7a23f,2025-07-18,41.24,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+5d16716f,2025-07-18,98.87,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+a78d6087,2025-07-18,2418.42,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+d7eba895,2025-07-19,36.6,USD,Starbucks,Food,Food payment at Starbucks,debit
+17d820aa,2025-07-20,27.78,USD,Chipotle,Food,Food payment at Chipotle,debit
+39703477,2025-07-20,67.21,USD,Target,Shopping,Shopping payment at Target,debit
+1cebce7b,2025-07-20,8.12,USD,McDonald's,Food,Food payment at McDonald's,debit
+86a7df6f,2025-07-20,147.77,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+22255ad1,2025-07-20,12.51,USD,McDonald's,Food,Food payment at McDonald's,debit
+d8746004,2025-07-20,37.05,USD,Chipotle,Food,Food payment at Chipotle,debit
+4b0fc52c,2025-07-21,74.37,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+ebec1259,2025-07-21,9.37,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+ea35d3c6,2025-07-21,21.03,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+331f8488,2025-07-21,187.97,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+0c57f452,2025-07-22,24.46,USD,Chipotle,Food,Food payment at Chipotle,debit
+24a305b4,2025-07-22,18.07,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+cf97572f,2025-07-22,141.61,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+f83b99c6,2025-07-22,185.61,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+5ff71e1c,2025-07-22,10.71,USD,KFC,Food,Food payment at KFC,debit
+0049fab9,2025-07-23,2916.05,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+5672d74c,2025-07-23,53.29,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+60ccb5d5,2025-07-23,61.4,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+297d8e6b,2025-07-24,59.95,USD,Costco,Groceries,Groceries payment at Costco,debit
+e5519d32,2025-07-25,41.13,USD,Lyft,Transport,Transport payment at Lyft,debit
+e173efbf,2025-07-25,6.44,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+d82b13fa,2025-07-25,194.28,USD,Comcast,Bills,Bills payment at Comcast,debit
+0b8ae396,2025-07-25,17.13,USD,Uber,Transport,Transport payment at Uber,debit
+8f0ccb6c,2025-07-26,163.94,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+0f62a71f,2025-07-26,23.54,USD,Starbucks,Food,Food payment at Starbucks,debit
+3c54965b,2025-07-26,36.29,USD,Uber,Transport,Transport payment at Uber,debit
+5ecd7be1,2025-07-26,120.27,USD,Target,Shopping,Shopping payment at Target,debit
+6ee896af,2025-07-26,17.23,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+eabef13d,2025-07-28,15.51,USD,Chipotle,Food,Food payment at Chipotle,debit
+d2a2cb02,2025-07-28,18.54,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+3ada7aa1,2025-07-28,27.14,USD,Lyft,Transport,Transport payment at Lyft,debit
+b5e90d44,2025-07-28,202.16,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+e8056a01,2025-07-29,29.06,USD,Costco,Groceries,Groceries payment at Costco,debit
+3e797cd0,2025-07-29,193.96,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+cafc10a3,2025-07-29,33.34,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+24315434,2025-07-30,198.81,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+428ca3f2,2025-07-30,12.96,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+ca01830a,2025-07-30,156.12,USD,Target,Shopping,Shopping payment at Target,debit
+0e679bdb,2025-07-30,42.25,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+83ce5012,2025-07-30,38.01,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+029145ff,2025-07-30,203.84,USD,AT&T,Bills,Bills payment at AT&T,debit
+da203bc9,2025-07-30,12.29,USD,Chipotle,Food,Food payment at Chipotle,debit
+2e7f2d31,2025-07-30,191.97,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+9203a31b,2025-07-31,266.57,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+692c93ef,2025-08-01,168.85,USD,Target,Shopping,Shopping payment at Target,debit
+87c46b45,2025-08-02,28.77,USD,Starbucks,Food,Food payment at Starbucks,debit
+458b57a6,2025-08-02,13.62,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+43df6196,2025-08-02,23.76,USD,Chipotle,Food,Food payment at Chipotle,debit
+b0250f2d,2025-08-04,6.83,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+deeb31ff,2025-08-04,109.47,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+867f8b51,2025-08-04,33.64,USD,Chipotle,Food,Food payment at Chipotle,debit
+4f022e91,2025-08-04,29.6,USD,Lyft,Transport,Transport payment at Lyft,debit
+264b2839,2025-08-05,2087.37,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+859dbcac,2025-08-05,26.57,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+b6718bdb,2025-08-05,15.14,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+c79fe469,2025-08-05,34.38,USD,Chipotle,Food,Food payment at Chipotle,debit
+46aa0c18,2025-08-05,114.86,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+314542ef,2025-08-06,36.18,USD,Chipotle,Food,Food payment at Chipotle,debit
+7f008929,2025-08-06,35.38,USD,Starbucks,Food,Food payment at Starbucks,debit
+bda55dda,2025-08-06,9.26,USD,McDonald's,Food,Food payment at McDonald's,debit
+f0a92a0b,2025-08-06,23.36,USD,Chipotle,Food,Food payment at Chipotle,debit
+dd93f050,2025-08-07,90.26,USD,Costco,Groceries,Groceries payment at Costco,debit
+bbe357e7,2025-08-07,37.21,USD,Lyft,Transport,Transport payment at Lyft,debit
+d0bd268b,2025-08-07,129.95,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+a7a727bd,2025-08-07,28.1,USD,Chipotle,Food,Food payment at Chipotle,debit
+cd56b373,2025-08-08,26.87,USD,Chipotle,Food,Food payment at Chipotle,debit
+820fece1,2025-08-08,2628.53,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+4288c68e,2025-08-08,6.94,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+673ad353,2025-08-09,32.23,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+7d436ba8,2025-08-09,32.9,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+b414a183,2025-08-09,85.1,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+ec0cb6d9,2025-08-10,43.89,USD,Uber,Transport,Transport payment at Uber,debit
+eb48ee48,2025-08-10,22.12,USD,KFC,Food,Food payment at KFC,debit
+4c6eaa03,2025-08-10,10.16,USD,Uber,Transport,Transport payment at Uber,debit
+1af418bd,2025-08-11,55.15,USD,Target,Shopping,Shopping payment at Target,debit
+3c091e99,2025-08-11,288.15,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+a5640a7a,2025-08-11,36.85,USD,Uber,Transport,Transport payment at Uber,debit
+4c96cc21,2025-08-12,174.04,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+651ed80b,2025-08-12,57.92,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+8fe2e460,2025-08-12,6.97,USD,Chipotle,Food,Food payment at Chipotle,debit
+d720ad03,2025-08-13,222.64,USD,AT&T,Bills,Bills payment at AT&T,debit
+94b790d7,2025-08-13,1707.77,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+8e6cdb2c,2025-08-13,2596.85,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+2337e0c3,2025-08-14,148.19,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+cdf096c2,2025-08-15,216.92,USD,Comcast,Bills,Bills payment at Comcast,debit
+10243b5e,2025-08-15,125.16,USD,Target,Shopping,Shopping payment at Target,debit
+e2b676b5,2025-08-16,56.25,USD,Lyft,Transport,Transport payment at Lyft,debit
+721ac285,2025-08-16,16.55,USD,Lyft,Transport,Transport payment at Lyft,debit
+4e60af40,2025-08-16,168.3,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+64dd5851,2025-08-16,253.05,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+f838ba78,2025-08-17,11.04,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+20e8aca2,2025-08-17,127.45,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+c396d276,2025-08-17,76.76,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+777b4623,2025-08-17,2293.57,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+49e3c1f0,2025-08-18,2546.81,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+5c709146,2025-08-18,23.01,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+02c0cade,2025-08-19,136.87,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+7f72817c,2025-08-19,15.04,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+7752042b,2025-08-20,2114.45,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+63de84b9,2025-08-20,134.09,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+2674c53c,2025-08-20,36.1,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+3201dad0,2025-08-21,36.34,USD,Lyft,Transport,Transport payment at Lyft,debit
+18a43b2b,2025-08-21,49.54,USD,Costco,Groceries,Groceries payment at Costco,debit
+aea81349,2025-08-21,37.57,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+9b9651c5,2025-08-21,35.84,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+af44fb42,2025-08-22,46.48,USD,Uber,Transport,Transport payment at Uber,debit
+83f9a623,2025-08-22,35.25,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+033159ff,2025-08-22,152.52,USD,Target,Shopping,Shopping payment at Target,debit
+62b157b3,2025-08-23,19.33,USD,Lyft,Transport,Transport payment at Lyft,debit
+4bd77ee3,2025-08-24,24.72,USD,McDonald's,Food,Food payment at McDonald's,debit
+c6bc1169,2025-08-24,38.98,USD,Uber,Transport,Transport payment at Uber,debit
+4a57b6cf,2025-08-24,57.43,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+fa15af53,2025-08-24,66.9,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+c056e6fa,2025-08-24,134.79,USD,Verizon,Bills,Bills payment at Verizon,debit
+b7c04df0,2025-08-24,22.82,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+1797b256,2025-08-25,20.58,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+ec7e0353,2025-08-25,39.3,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+5c5f7298,2025-08-25,74.63,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+62c82453,2025-08-25,119.47,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+88860143,2025-08-25,19.56,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+00709a9b,2025-08-25,53.28,USD,Target,Shopping,Shopping payment at Target,debit
+91d26ddb,2025-08-26,105.87,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+442ea7ac,2025-08-26,131.71,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+c96c9086,2025-08-26,16.65,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+8f114324,2025-08-27,1834.31,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+9d896480,2025-08-27,30.32,USD,Costco,Groceries,Groceries payment at Costco,debit
+a619baff,2025-08-28,73.02,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+c7381e20,2025-08-28,89.83,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+9746dba0,2025-08-28,77.33,USD,Target,Shopping,Shopping payment at Target,debit
+43481f02,2025-08-28,22.83,USD,Chipotle,Food,Food payment at Chipotle,debit
+78f10e63,2025-08-28,15.71,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+c4be8521,2025-08-29,15.88,USD,Uber,Transport,Transport payment at Uber,debit
+8d627f48,2025-08-29,41.67,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+ac93ed21,2025-08-30,12.18,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+53158c46,2025-08-31,83.86,USD,Verizon,Bills,Bills payment at Verizon,debit
+a79b8579,2025-08-31,39.85,USD,Starbucks,Food,Food payment at Starbucks,debit
+c2a67bb0,2025-09-01,46.38,USD,Lyft,Transport,Transport payment at Lyft,debit
+3cad9850,2025-09-01,20.57,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+4290c1ad,2025-09-01,13.18,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+01d89762,2025-09-02,103.76,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+b5ae8c3d,2025-09-02,39.24,USD,McDonald's,Food,Food payment at McDonald's,debit
+eb4ea582,2025-09-03,29.75,USD,Chipotle,Food,Food payment at Chipotle,debit
+d99f8e52,2025-09-03,114.17,USD,Costco,Groceries,Groceries payment at Costco,debit
+ce677dc7,2025-09-03,23.19,USD,Uber,Transport,Transport payment at Uber,debit
+bdc5be47,2025-09-04,122.71,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+cab13edb,2025-09-04,59.89,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+b142774d,2025-09-04,57.16,USD,Lyft,Transport,Transport payment at Lyft,debit
+702650e9,2025-09-04,17.05,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+b12c6628,2025-09-04,110.93,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+889527f0,2025-09-05,6.94,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+1f0f565e,2025-09-06,61.3,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+c2cc54e4,2025-09-07,10.1,USD,Uber,Transport,Transport payment at Uber,debit
+0c7be834,2025-09-08,67.87,USD,Costco,Groceries,Groceries payment at Costco,debit
+abafd3f3,2025-09-08,18.01,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+26767400,2025-09-08,31.64,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+c29834e4,2025-09-08,29.1,USD,McDonald's,Food,Food payment at McDonald's,debit
+c42127c0,2025-09-08,46.93,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+29e2c7b5,2025-09-08,147.4,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+eed77ca7,2025-09-08,16.56,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+c00fc87f,2025-09-09,21.79,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+f1b4a676,2025-09-09,91.13,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+5952f538,2025-09-09,20.2,USD,KFC,Food,Food payment at KFC,debit
+619d85a4,2025-09-10,2943.8,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+e1aa7bf9,2025-09-11,5.03,USD,McDonald's,Food,Food payment at McDonald's,debit
+1f5573bb,2025-09-11,2414.63,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+763ecce9,2025-09-12,148.79,USD,Costco,Groceries,Groceries payment at Costco,debit
+a2337143,2025-09-13,143.17,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+8c65c137,2025-09-13,1678.08,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+5d9cc2d9,2025-09-13,22.3,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+c347c604,2025-09-13,28.91,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+47bacc49,2025-09-13,2952.41,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+7b7f4009,2025-09-13,5.9,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+eaea2b66,2025-09-14,51.67,USD,Target,Shopping,Shopping payment at Target,debit
+eaab9931,2025-09-14,298.7,USD,Comcast,Bills,Bills payment at Comcast,debit
+15f5813c,2025-09-14,31.63,USD,McDonald's,Food,Food payment at McDonald's,debit
+41547a9c,2025-09-15,20.69,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+33f6f1e7,2025-09-15,6.16,USD,McDonald's,Food,Food payment at McDonald's,debit
+35129bae,2025-09-15,106.15,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+4d926c85,2025-09-15,95.11,USD,Verizon,Bills,Bills payment at Verizon,debit
+73dc9b18,2025-09-15,149.86,USD,AT&T,Bills,Bills payment at AT&T,debit
+3a97ed77,2025-09-16,10.74,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+22eef3dc,2025-09-16,29.96,USD,Starbucks,Food,Food payment at Starbucks,debit
+7d85cd9a,2025-09-16,19.3,USD,McDonald's,Food,Food payment at McDonald's,debit
+ffe503bc,2025-09-17,36.32,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+2c65bf86,2025-09-17,144.18,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+0125aae6,2025-09-18,22.21,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+d58f3b92,2025-09-18,39.41,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+9fc431be,2025-09-19,53.46,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+c1fc60d3,2025-09-19,87.5,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+f09c2b73,2025-09-19,275.28,USD,AT&T,Bills,Bills payment at AT&T,debit
+f51646de,2025-09-20,62.57,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+49c52d77,2025-09-20,6.49,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+62be38d4,2025-09-21,38.7,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+32eb1a1d,2025-09-22,143.11,USD,Verizon,Bills,Bills payment at Verizon,debit
+8a67e1db,2025-09-22,38.08,USD,Starbucks,Food,Food payment at Starbucks,debit
+9eae8263,2025-09-22,36.0,USD,Starbucks,Food,Food payment at Starbucks,debit
+14a27fc3,2025-09-22,67.51,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+23af6244,2025-09-23,136.6,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+411fd86a,2025-09-23,193.94,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+2e739c7f,2025-09-23,2200.65,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+aab3d094,2025-09-26,30.23,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+13adb6c4,2025-09-26,7.06,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+1409fe87,2025-09-26,183.48,USD,Amazon,Shopping,Shopping payment at Amazon,debit
+afe45e36,2025-09-26,46.48,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+2e85c462,2025-09-27,87.73,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+fa45d0cc,2025-09-27,89.52,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+46925481,2025-09-28,24.58,USD,McDonald's,Food,Food payment at McDonald's,debit
+c91c5794,2025-09-28,11.29,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+0c783e54,2025-09-28,18.25,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+993359f1,2025-09-28,11.33,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+988edc90,2025-09-28,147.38,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+ced486e9,2025-09-28,143.88,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+d6aba89a,2025-09-29,7.63,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+7c6230a5,2025-09-29,13.96,USD,KFC,Food,Food payment at KFC,debit
+e486a338,2025-09-29,39.78,USD,Starbucks,Food,Food payment at Starbucks,debit
+5ef2ce24,2025-09-30,162.82,USD,AT&T,Bills,Bills payment at AT&T,debit
+59ad0b60,2025-10-01,40.38,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+18c09e60,2025-10-01,17.64,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+41fb242a,2025-10-01,15.65,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+ae1461a2,2025-10-01,110.63,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+0337c497,2025-10-01,59.15,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+22a6a8ae,2025-10-02,65.84,USD,Comcast,Bills,Bills payment at Comcast,debit
+5245378f,2025-10-02,92.74,USD,AT&T,Bills,Bills payment at AT&T,debit
+6cce101a,2025-10-02,159.44,USD,Target,Shopping,Shopping payment at Target,debit
+59808ca1,2025-10-02,103.06,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+91297359,2025-10-03,27.03,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+b6291e1a,2025-10-03,22.64,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+992dd3dd,2025-10-03,22.06,USD,Steam,Entertainment,Entertainment payment at Steam,debit
+481cdbc3,2025-10-03,145.26,USD,Target,Shopping,Shopping payment at Target,debit
+e9c5bf48,2025-10-03,31.42,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+3e9e68d4,2025-10-03,12.69,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+cf89b79e,2025-10-04,127.36,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+e198e5c2,2025-10-04,46.04,USD,Costco,Groceries,Groceries payment at Costco,debit
+b95d3c87,2025-10-04,35.66,USD,Starbucks,Food,Food payment at Starbucks,debit
+a7250954,2025-10-05,19.08,USD,McDonald's,Food,Food payment at McDonald's,debit
+2f79a214,2025-10-06,47.11,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+8b56951d,2025-10-07,284.83,USD,Verizon,Bills,Bills payment at Verizon,debit
+769ad707,2025-10-07,2290.37,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+d0f50d1e,2025-10-08,12.06,USD,McDonald's,Food,Food payment at McDonald's,debit
+2ea3dbbb,2025-10-08,5.41,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+a6c9191a,2025-10-08,31.69,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+50ad669c,2025-10-09,10.35,USD,Lyft,Transport,Transport payment at Lyft,debit
+b4efa031,2025-10-09,24.43,USD,McDonald's,Food,Food payment at McDonald's,debit
+97cd8036,2025-10-09,37.2,USD,Chipotle,Food,Food payment at Chipotle,debit
+c152bffa,2025-10-10,108.04,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+205edfe2,2025-10-10,27.2,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+a84c77b9,2025-10-10,11.24,USD,McDonald's,Food,Food payment at McDonald's,debit
+b180b42f,2025-10-10,83.75,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+82c6b377,2025-10-10,143.83,USD,Cash App Refill,Transfers,Transfers payment at Cash App Refill,debit
+709c1e0a,2025-10-11,42.48,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+4dc5c75b,2025-10-12,50.49,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+a9fd053b,2025-10-12,12.34,USD,KFC,Food,Food payment at KFC,debit
+7486c104,2025-10-12,23.92,USD,Walmart,Shopping,Shopping payment at Walmart,debit
+212f209b,2025-10-13,57.89,USD,Verizon,Bills,Bills payment at Verizon,debit
+f2fe31ea,2025-10-15,48.95,USD,Shell Gas,Transport,Transport payment at Shell Gas,debit
+758c328c,2025-10-15,21.08,USD,Uber,Transport,Transport payment at Uber,debit
+b2347a95,2025-10-15,139.08,USD,AT&T,Bills,Bills payment at AT&T,debit
+9e7e1590,2025-10-16,78.98,USD,Comcast,Bills,Bills payment at Comcast,debit
+02fd20c4,2025-10-16,24.77,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+f91f6791,2025-10-16,277.39,USD,Comcast,Bills,Bills payment at Comcast,debit
+9115a810,2025-10-16,234.58,USD,AT&T,Bills,Bills payment at AT&T,debit
+a8b70a5d,2025-10-17,269.68,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+9bd0c2d7,2025-10-17,97.21,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+6c1eb7fb,2025-10-17,240.15,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+e9db3d3a,2025-10-17,103.1,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+2bd2c0be,2025-10-17,57.5,USD,Kroger,Groceries,Groceries payment at Kroger,debit
+9097525c,2025-10-17,43.47,USD,Lyft,Transport,Transport payment at Lyft,debit
+b2a73a57,2025-10-18,122.54,USD,Target,Shopping,Shopping payment at Target,debit
+270556e4,2025-10-19,23.2,USD,Spotify,Entertainment,Entertainment payment at Spotify,debit
+83bda25d,2025-10-19,97.29,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+6fa8699d,2025-10-19,299.54,USD,Verizon,Bills,Bills payment at Verizon,debit
+0a823676,2025-10-19,7.56,USD,Starbucks,Food,Food payment at Starbucks,debit
+351d248e,2025-10-19,18.59,USD,Lyft,Transport,Transport payment at Lyft,debit
+9448e885,2025-10-20,108.91,USD,Aldi,Groceries,Groceries payment at Aldi,debit
+a4cf81f5,2025-10-21,41.75,USD,Friend Transfer,Transfers,Transfers payment at Friend Transfer,debit
+efa31cc3,2025-10-21,24.74,USD,Domino's Pizza,Food,Food payment at Domino's Pizza,debit
+c7ea072f,2025-10-21,242.68,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+5f1e387a,2025-10-22,52.83,USD,Lyft,Transport,Transport payment at Lyft,debit
+a67bd170,2025-10-22,10.39,USD,KFC,Food,Food payment at KFC,debit
+ecfa9af7,2025-10-23,38.56,USD,Starbucks,Food,Food payment at Starbucks,debit
+e958248d,2025-10-23,30.41,USD,Target,Shopping,Shopping payment at Target,debit
+6ff24014,2025-10-23,47.15,USD,Uber,Transport,Transport payment at Uber,debit
+fc4a3ae9,2025-10-23,16.4,USD,McDonald's,Food,Food payment at McDonald's,debit
+dc46ccf0,2025-10-24,67.78,USD,Costco,Groceries,Groceries payment at Costco,debit
+bec3f461,2025-10-24,57.22,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+b48ffe0b,2025-10-24,113.31,USD,Whole Foods,Groceries,Groceries payment at Whole Foods,debit
+3358f45a,2025-10-24,143.97,USD,Target,Shopping,Shopping payment at Target,debit
+60d2bbd9,2025-10-24,1720.99,USD,Employer Inc.,Salary,Salary payment at Employer Inc.,credit
+82334fbb,2025-10-24,46.66,USD,ExxonMobil,Transport,Transport payment at ExxonMobil,debit
+e45769d5,2025-10-24,293.52,USD,AT&T,Bills,Bills payment at AT&T,debit
+32250234,2025-10-24,28.24,USD,Starbucks,Food,Food payment at Starbucks,debit
+3ad3a05c,2025-10-25,16.87,USD,YouTube Premium,Entertainment,Entertainment payment at YouTube Premium,debit
+14f0eaa7,2025-10-25,279.17,USD,Electric Co.,Bills,Bills payment at Electric Co.,debit
+0087f48a,2025-10-25,33.22,USD,Uber,Transport,Transport payment at Uber,debit
+3c01d969,2025-10-26,157.17,USD,Target,Shopping,Shopping payment at Target,debit
+a37be556,2025-10-26,20.66,USD,Netflix,Entertainment,Entertainment payment at Netflix,debit
+48ab1d06,2025-10-26,48.74,USD,Best Buy,Shopping,Shopping payment at Best Buy,debit
+f56bdeac,2025-10-26,14.58,USD,Starbucks,Food,Food payment at Starbucks,debit
+dc000bfd,2025-10-26,93.33,USD,AT&T,Bills,Bills payment at AT&T,debit
