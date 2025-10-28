@@ -121,24 +121,3 @@ Return a JSON with this structure only:
     except Exception as e:
         print("⚠️ Failed to parse LLM response:", e)
         return {"error": "Failed to parse response", "raw_output": raw_output}
-
-
-    response = openai.ChatCompletion.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": "You are a helpful finance assistant."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.3,
-    )
-
-    # Extract model response
-    content = response["choices"][0]["message"]["content"]
-
-    # Attempt to parse as JSON
-    import json
-    try:
-        return json.loads(content)
-    except json.JSONDecodeError:
-        # If model returned non-JSON, wrap in dict
-        return {"raw_response": content}
