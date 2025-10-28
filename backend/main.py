@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.routes import upload, transactions, analyze, forecast
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+
 
 app = FastAPI(title="Finance Copilot API", version="1.0")
 
