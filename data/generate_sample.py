@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 # --- Configuration ---
-NUM_MONTHS = random.randint(6, 12)   # Generate 6–12 months of data
+NUM_MONTHS = random.randint(6, 24)   # Generate 6–24 months of data
 TX_PER_MONTH = random.randint(80, 150)
 CURRENCY = "USD"
 

@@ -14,7 +14,10 @@ def forecast_spending():
 
     df = pd.DataFrame(transactions_db)
     df["date"] = pd.to_datetime(df["date"])
-    df = df.groupby(df["date"].dt.to_period("M")).sum().reset_index()
+    
+    # ✅ Only sum the numeric "amount" column
+    df = df.groupby(df["date"].dt.to_period("M"))["amount"].sum().reset_index()
+    df.rename(columns={"date": "month"}, inplace=True)
     df["month_idx"] = np.arange(len(df))
 
     model = LinearRegression()
@@ -24,7 +27,7 @@ def forecast_spending():
     forecast = model.predict([[next_month]])[0]
 
     return {
-        "months": df["date"].astype(str).tolist(),
+        "months": df["month"].astype(str).tolist(),
         "amounts": df["amount"].tolist(),
         "forecast_next_month": round(float(forecast), 2)
     }
