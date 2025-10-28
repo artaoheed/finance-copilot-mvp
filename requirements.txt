@@ -14,3 +14,7 @@ requests
 # Optional
 matplotlib
 plotly
+
+# --- LLM Integrations ---
+openai>=1.0.0
+google-generativeai
