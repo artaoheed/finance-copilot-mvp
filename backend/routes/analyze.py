@@ -1,27 +1,50 @@
 # backend/routes/analyze.py
 from fastapi import APIRouter
 from backend.routes.upload import transactions_db
+from backend.ai.llm_client import analyze_transactions_with_llm
 import pandas as pd
 from statistics import mean
-from pydantic import BaseModel
-
-class AnalyzeRequest(BaseModel):
-    transactions: list[dict]
 
 router = APIRouter(prefix="/analyze", tags=["Analyze"])
 
+
 @router.post("")
-async def analyze_transactions(request: AnalyzeRequest):
+async def analyze_transactions():
+    """
+    Analyze transactions using LLM (Gemini/OpenAI/Claude).
+    Falls back to local summary if LLM fails.
+    """
     if not transactions_db:
         return {"error": "No transactions found."}
 
-    df = pd.DataFrame(transactions_db)
-    top_category = df.groupby("category")["amount"].sum().abs().idxmax()
-    avg_spend = round(mean(df["amount"].abs()), 2)
-    suggestion = f"You spend most in '{top_category}'. Try setting a weekly budget to cut {top_category} costs."
+    try:
+        # --- Step 1: Run through AI analysis ---
+        llm_result = analyze_transactions_with_llm(transactions_db)
 
-    return {
-        "top_category": top_category,
-        "average_spend": avg_spend,
-        "suggestion": suggestion
-    }
+        if "error" not in llm_result:
+            return {
+                "status": "success",
+                "analysis_source": "LLM",
+                "results": llm_result
+            }
+
+        # --- Step 2: If AI fails, use fallback ---
+        else:
+            df = pd.DataFrame(transactions_db)
+            top_category = df.groupby("category")["amount"].sum().abs().idxmax()
+            avg_spend = round(mean(df["amount"].abs()), 2)
+            suggestion = f"You spend most in '{top_category}'. Try setting a weekly budget to cut {top_category} costs."
+
+            return {
+                "status": "success",
+                "analysis_source": "Fallback",
+                "results": {
+                    "top_categories": [{"category": top_category, "total": avg_spend}],
+                    "advice": suggestion,
+                    "summary": f"Average spend per transaction is ${avg_spend}."
+                }
+            }
+
+    except Exception as e:
+        return {"error": f"Analysis failed: {str(e)}"}
+
