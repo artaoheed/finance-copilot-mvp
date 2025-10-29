@@ -5,84 +5,71 @@ import matplotlib.pyplot as plt
 
 BASE_URL = "http://127.0.0.1:8000"
 
-def extract_list_from_response(resp_json):
-    if isinstance(resp_json, dict):
-        for k in ("data", "transactions", "items", "results", "payload"):
-            if k in resp_json and isinstance(resp_json[k], list):
-                return resp_json[k]
-        for v in resp_json.values():
-            if isinstance(v, list):
-                return v
-        return None
-    elif isinstance(resp_json, list):
-        return resp_json
-    else:
-        return None
-
-def find_amount_field(df):
-    candidates = ["amount", "Amount", "amt", "value", "transaction_amount", "amount_usd"]
-    for c in candidates:
-        if c in df.columns:
-            return c
-    numeric_cols = df.select_dtypes(include="number").columns.tolist()
-    if len(numeric_cols) == 1:
-        return numeric_cols[0]
-    return None
-
 def show_forecast_page():
-    st.subheader("💳 Transaction Summary (robust)")
+    st.title("📈 Spending Forecast Dashboard")
 
-    if st.button("View Transaction Summary"):
-        try:
-            resp = requests.get(f"{BASE_URL}/transactions?limit=200")
-            data_json = resp.json()
+    # --- Select forecast method ---
+    method = st.selectbox(
+        "Select Forecast Method:",
+        ["rolling", "linear"],
+        format_func=lambda x: "Rolling Average" if x == "rolling" else "Linear Regression"
+    )
 
-            records = extract_list_from_response(data_json)
-            if not records:
-                st.error("No transaction list found in response.")
-                return
+    st.markdown(
+        """
+        **Rolling Average** → Uses the past few months’ averages and spending trend.  
+        **Linear Regression** → Fits a straight line trend across your spending history.
+        """
+    )
 
-            df = pd.DataFrame(records)
-            amount_field = find_amount_field(df)
+    if st.button("Run Forecast"):
+        with st.spinner(f"Fetching {method.capitalize()} Forecast..."):
+            try:
+                # Call backend
+                response = requests.get(f"{BASE_URL}/forecast", params={"method": method})
+                if response.status_code != 200:
+                    st.error(f"Request failed with status code {response.status_code}")
+                    return
 
-            if not amount_field:
-                st.error("The 'amount' field is missing. Available fields: " + ", ".join(df.columns.tolist()))
-                return
+                data = response.json()
+                if "error" in data:
+                    st.error(data["error"])
+                    return
 
-            df[amount_field] = pd.to_numeric(df[amount_field], errors="coerce")
-            df["amount"] = df[amount_field]
+                # --- Prepare data ---
+                months = data.get("historical_months", [])
+                amounts = data.get("historical_amounts", [])
+                next_pred = data.get("predicted_next_month_amount", None)
 
-            date_cols = [c for c in df.columns if "date" in c.lower()]
-            if date_cols:
-                df["date"] = pd.to_datetime(df[date_cols[0]], errors="coerce")
+                if not months or not amounts:
+                    st.warning("No transaction data found to plot.")
+                    return
 
-            total_spent = df["amount"].sum()
-            num_txns = df.shape[0]
-            avg_tx = df["amount"].mean()
+                df = pd.DataFrame({"Month": months, "Amount": amounts})
 
-            col1, col2, col3 = st.columns(3)
-            col1.metric("Total Transactions", f"{num_txns}")
-            col2.metric("Total Amount ($)", f"{total_spent:,.2f}")
-            col3.metric("Average Transaction ($)", f"{avg_tx:,.2f}" if not pd.isna(avg_tx) else "N/A")
+                # --- Plot historical and forecast ---
+                fig, ax = plt.subplots()
 
-            if "category" in df.columns:
-                top_cats = df.groupby("category")["amount"].sum().nlargest(5).reset_index()
-                st.markdown("### 🥇 Top Categories")
-                st.bar_chart(top_cats.set_index("category"))
-            else:
-                st.info("No 'category' field available to produce a breakdown.")
+                df["Month"] = pd.to_datetime(df["Month"], errors="coerce")
 
-            if "date" in df.columns and df["date"].notna().any():
-                trend = (
-                    df.dropna(subset=["date"])
-                    .sort_values("date")
-                    .set_index("date")
-                    .resample("D")["amount"]
-                    .sum()
-                    .rolling(7)
-                    .mean()
-                )
-                st.line_chart(trend)
+                ax.plot(df["Month"], df["Amount"], marker="o", label="Historical Spending")
+                ax.set_xlabel("Month")
+                ax.set_ylabel("Spending (USD)")
+                plt.xticks(rotation=45)
 
-        except Exception as e:
-            st.error(f"An error occurred while fetching transactions: {e}")
+                if next_pred is not None:
+                    next_month = df["Month"].max() + pd.DateOffset(months=1)
+                    ax.scatter(next_month, next_pred, color="red", label="Forecast")
+                    ax.axhline(y=next_pred, color="red", linestyle="--", alpha=0.6)
+                    st.success(f"💵 Forecast for {next_month.strftime('%B %Y')}: **${next_pred:,.2f}**")
+
+                ax.set_title(f"Spending Forecast ({method.capitalize()} Method)")
+                ax.legend()
+                st.pyplot(fig)
+
+                # --- Display raw data ---
+                with st.expander("📊 View Raw Forecast Data"):
+                    st.dataframe(df)
+
+            except Exception as e:
+                st.error(f"An error occurred: {e}")

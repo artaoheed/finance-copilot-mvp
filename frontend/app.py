@@ -1,58 +1,152 @@
+# frontend/app.py
 import streamlit as st
 import pandas as pd
 import requests
-import io
-from forecast_app import show_forecast_page
-from analyze_app import show_analysis_page
+import matplotlib.pyplot as plt
 
+# --- Backend Base URL ---
+BASE_URL = "http://127.0.0.1:8000"
 
-st.set_page_config(page_title='Copilot for Personal Finance', layout='centered')
-st.title("💸 Copilot for Personal Finance (Demo)")
-st.write("Upload a Cash-App-style transaction CSV and get AI insights + a naive forecast.")
+# --- Page Config ---
+st.set_page_config(page_title="💸 Copilot for Personal Finance", layout="wide")
 
+# --- Initialize Session State ---
+if "df" not in st.session_state:
+    st.session_state.df = None
+if "uploaded" not in st.session_state:
+    st.session_state.uploaded = False
 
-st.set_page_config(page_title="💸 Finance Insights Dashboard", layout="wide")
+# --- Sidebar Navigation ---
+st.sidebar.title("🔍 Navigation")
+page = st.sidebar.radio("Go to:", ["Upload CSV", "AI Analysis", "Forecast"])
 
-st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to:", ["Forecast", "AI Analysis"])
+# --- Header ---
+st.title("💸 Copilot for Personal Finance")
+st.markdown("_An AI-powered assistant that helps you understand and forecast your spending._")
 
-if page == "Forecast":
-    show_forecast_page()
+# ===========================
+# 📤 PAGE 1: UPLOAD CSV
+# ===========================
+if page == "Upload CSV":
+    st.subheader("📤 Upload Transaction Data")
+    uploaded_file = st.file_uploader("Upload your transaction CSV", type=["csv"])
+
+    if uploaded_file:
+        try:
+            df = pd.read_csv(uploaded_file)
+            st.session_state.df = df
+            st.session_state.uploaded = True
+
+            st.success("✅ File uploaded successfully!")
+            st.dataframe(df.head(10))
+
+            # --- Send file to backend ---
+            st.info("⏳ Sending data to backend...")
+            try:
+                files = {"file": uploaded_file.getvalue() if hasattr(uploaded_file, "getvalue") else uploaded_file.read()}
+                upload_response = requests.post(f"{BASE_URL}/upload", files={"file": uploaded_file})
+                if upload_response.status_code == 200:
+                    st.success("📡 Transactions successfully sent to backend!")
+                else:
+                    st.error(f"Backend upload failed: {upload_response.text}")
+            except Exception as e:
+                st.error(f"❌ Could not send file to backend: {e}")
+
+            # --- Charts ---
+            if "date" in df.columns:
+                df["date"] = pd.to_datetime(df["date"], errors="coerce")
+                monthly = df.groupby(df["date"].dt.to_period("M"))["amount"].sum().reset_index()
+                monthly["month"] = monthly["date"].dt.to_timestamp()
+
+                st.markdown("### 📈 Monthly Spending Trend")
+                fig, ax = plt.subplots()
+                ax.plot(monthly["month"], monthly["amount"], marker="o", color="blue")
+                ax.set_xlabel("Month")
+                ax.set_ylabel("Total Spending ($)")
+                ax.set_title("Monthly Spending Trend")
+                plt.xticks(rotation=45)
+                st.pyplot(fig)
+
+            if "category" in df.columns:
+                cat = df.groupby("category")["amount"].sum().sort_values(ascending=False)
+                st.markdown("### 🥧 Spending by Category")
+                st.bar_chart(cat)
+
+        except Exception as e:
+            st.error(f"❌ Could not process CSV: {e}")
+
+    else:
+        st.info("📁 Upload a CSV file to start analyzing your finances.")
+
+# ===========================
+# 🧠 PAGE 2: AI ANALYSIS
+# ===========================
 elif page == "AI Analysis":
-    show_analysis_page()
+    st.subheader("🧠 Analyze Transactions with AI")
 
-# File uploader
-uploaded_file = st.file_uploader("Upload transaction CSV", type=["csv"])
-if uploaded_file:
-    try:
-        df = pd.read_csv(uploaded_file) # Read CSV file
-        st.subheader("Preview of uploaded data") # Display data preview
-        st.dataframe(df.head(20)) # Display first 20 rows
+    if not st.session_state.uploaded:
+        st.warning("⚠️ Please upload a CSV first under 'Upload CSV'.")
+    else:
+        if st.button("Run AI Analysis"):
+            try:
+                response = requests.post(f"{BASE_URL}/analyze")
+                data = response.json()
+                if "error" in data:
+                    st.error(data["error"])
+                else:
+                    results = data["results"]
+                    st.success(f"✅ Analysis completed using {data['analysis_source']}")
 
-        # if st.button("Analyze with AI (local stub)"):
-        #     # Local stub analysis using ai/llm_client.py if running in same env
-        #     try:
-        #         from ai.llm_client import analyze_transactions # Import analysis function
-        #         result = analyze_transactions(df) # Call analysis function
-        #         st.subheader("AI Analysis") # Display AI analysis
-        #         st.json(result)
-        #     except Exception as e: # Handle exceptions
-        #         st.error(f"AI analysis failed: {e}")
+                    st.markdown("### 💡 Summary")
+                    st.info(results.get("summary", "No summary available."))
 
-        # if st.button("Forecast (naive)" ): # Forecast button
-        #     try: 
-        #         from models.forecast import forecast_next_month_spending # Import forecasting function
-        #         # Aggregate by month
-        #         df['date'] = pd.to_datetime(df['date'], errors='coerce')
-        #         monthly = df.groupby(df['date'].dt.to_period('M'))['amount'].sum().sort_index()
-        #         history = [float(x) for x in monthly.values]
-        #         pred = forecast_next_month_spending(history)
-        #         st.subheader("Forecast")
-        #         st.write(f"Predicted next month spending: ${pred:.2f}")
-        #         st.line_chart(history + [pred])
-        #     except Exception as e:
-        #         st.error(f"Forecast failed: {e}")
-    except Exception as e:
-        st.error(f"Could not parse CSV: {e}")
-else:
-    st.info("Use the sample CSV in /data to try the demo.")
+                    st.markdown("### 💬 Advice")
+                    st.success(results.get("advice", "No advice available."))
+
+                    st.markdown("### 💰 Top Categories")
+                    top_cats = pd.DataFrame(results.get("top_categories", []))
+                    if not top_cats.empty:
+                        st.dataframe(top_cats)
+            except Exception as e:
+                st.error(f"Analysis failed: {e}")
+
+# ===========================
+# 📊 PAGE 3: FORECAST
+# ===========================
+elif page == "Forecast":
+    st.subheader("📊 Spending Forecast")
+
+    if not st.session_state.uploaded:
+        st.warning("⚠️ Please upload a CSV first under 'Upload CSV'.")
+    else:
+        method = st.selectbox("Forecast Method", ["rolling", "linear"])
+        if st.button("Run Forecast"):
+            try:
+                response = requests.get(f"{BASE_URL}/forecast", params={"method": method})
+                data = response.json()
+                if "error" in data:
+                    st.error(data["error"])
+                else:
+                    next_amount = data["predicted_next_month_amount"]
+                    st.success(f"💵 Predicted next month spending: **${next_amount:,.2f}**")
+
+                    # Plot forecast data
+                    months = pd.to_datetime(data["historical_months"], errors="coerce")
+                    amounts = data["historical_amounts"]
+
+                    fig, ax = plt.subplots()
+                    ax.plot(months, amounts, marker="o", label="Historical")
+                    ax.scatter(
+                        months.max() + pd.DateOffset(months=1),
+                        next_amount,
+                        color="red",
+                        label="Forecast"
+                    )
+                    ax.axhline(y=next_amount, color="red", linestyle="--", alpha=0.6)
+                    ax.set_xlabel("Month")
+                    ax.set_ylabel("Spending ($)")
+                    ax.legend()
+                    plt.xticks(rotation=45)
+                    st.pyplot(fig)
+            except Exception as e:
+                st.error(f"Forecast failed: {e}")
