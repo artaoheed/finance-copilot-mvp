@@ -2,10 +2,24 @@ import streamlit as st
 import pandas as pd
 import requests
 import io
+from forecast_app import show_forecast_page
+from analyze_app import show_analysis_page
+
 
 st.set_page_config(page_title='Copilot for Personal Finance', layout='centered')
 st.title("💸 Copilot for Personal Finance (Demo)")
 st.write("Upload a Cash-App-style transaction CSV and get AI insights + a naive forecast.")
+
+
+st.set_page_config(page_title="💸 Finance Insights Dashboard", layout="wide")
+
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to:", ["Forecast", "AI Analysis"])
+
+if page == "Forecast":
+    show_forecast_page()
+elif page == "AI Analysis":
+    show_analysis_page()
 
 # File uploader
 uploaded_file = st.file_uploader("Upload transaction CSV", type=["csv"])

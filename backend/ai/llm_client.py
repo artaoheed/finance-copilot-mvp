@@ -3,6 +3,9 @@ import json
 import time
 import random
 from typing import List, Dict, Any, Optional
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # --- Provider SDK Imports (install the ones you need) ---
 # pip install openai google-generativeai anthropic
@@ -70,7 +73,7 @@ class LLMClient:
             return response.choices[0].message["content"].strip()
 
         elif self.provider == "gemini":
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-2.5-flash")
             response = model.generate_content(prompt)
             return response.text.strip()
 
