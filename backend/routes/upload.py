@@ -2,6 +2,7 @@
 from fastapi import APIRouter, UploadFile, File
 import pandas as pd
 from io import StringIO
+from backend.utils.logger import logger
 
 router = APIRouter(prefix="/upload", tags=["Upload"])
 
@@ -25,4 +26,24 @@ async def upload_transactions(file: UploadFile = File(...)):
         return {"status": "success", "rows_uploaded": len(records)}
 
     except Exception as e:
+        return {"error": f"Failed to process file: {e}"}
+
+
+@router.post("")
+async def upload_transactions(file: UploadFile = File(...)):
+    try:
+        logger.info("Starting CSV upload process...")
+        content = await file.read()
+        df = pd.read_csv(StringIO(content.decode("utf-8")))
+        records = df.to_dict(orient="records")
+
+        global transactions_db
+        transactions_db.clear()
+        transactions_db.extend(records)
+
+        logger.info(f"✅ Uploaded {len(records)} transactions successfully.")
+        return {"status": "success", "rows_uploaded": len(records)}
+
+    except Exception as e:
+        logger.error(f"❌ Upload failed: {str(e)}")
         return {"error": f"Failed to process file: {e}"}
