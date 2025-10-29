@@ -7,9 +7,16 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 app = FastAPI(title="Finance Copilot API", version="1.0")
 
+origins = [
+    "http://127.0.0.1:8501",  # Streamlit local
+    "http://localhost:8501",
+    "*"  # (Optional) for all origins in dev
+]
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

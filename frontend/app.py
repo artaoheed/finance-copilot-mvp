@@ -32,6 +32,24 @@ if page == "Upload CSV":
     uploaded_file = st.file_uploader("Upload your transaction CSV", type=["csv"])
 
     if uploaded_file:
+        
+        # --- Check for cached file ---
+        if "last_file_hash" in st.session_state:
+            import hashlib
+            file_hash = hashlib.md5(uploaded_file.getvalue()).hexdigest()
+            if file_hash == st.session_state.last_file_hash:
+                st.info("⚡ Using cached upload (same file as before).")
+                st.session_state.uploaded = True
+                df = st.session_state.df
+                st.dataframe(df.head(10))
+                st.stop()  # Stop re-upload to backend
+            else:
+                st.session_state.last_file_hash = file_hash
+        else:
+            import hashlib
+            st.session_state.last_file_hash = hashlib.md5(uploaded_file.getvalue()).hexdigest()
+
+
         try:
             df = pd.read_csv(uploaded_file)
             st.session_state.df = df
