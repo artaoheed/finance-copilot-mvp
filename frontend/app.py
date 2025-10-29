@@ -29,29 +29,29 @@ if uploaded_file:
         st.subheader("Preview of uploaded data") # Display data preview
         st.dataframe(df.head(20)) # Display first 20 rows
 
-        if st.button("Analyze with AI (local stub)"):
-            # Local stub analysis using ai/llm_client.py if running in same env
-            try:
-                from ai.llm_client import analyze_transactions # Import analysis function
-                result = analyze_transactions(df) # Call analysis function
-                st.subheader("AI Analysis") # Display AI analysis
-                st.json(result)
-            except Exception as e: # Handle exceptions
-                st.error(f"AI analysis failed: {e}")
+        # if st.button("Analyze with AI (local stub)"):
+        #     # Local stub analysis using ai/llm_client.py if running in same env
+        #     try:
+        #         from ai.llm_client import analyze_transactions # Import analysis function
+        #         result = analyze_transactions(df) # Call analysis function
+        #         st.subheader("AI Analysis") # Display AI analysis
+        #         st.json(result)
+        #     except Exception as e: # Handle exceptions
+        #         st.error(f"AI analysis failed: {e}")
 
-        if st.button("Forecast (naive)" ): # Forecast button
-            try: 
-                from models.forecast import forecast_next_month_spending # Import forecasting function
-                # Aggregate by month
-                df['date'] = pd.to_datetime(df['date'], errors='coerce')
-                monthly = df.groupby(df['date'].dt.to_period('M'))['amount'].sum().sort_index()
-                history = [float(x) for x in monthly.values]
-                pred = forecast_next_month_spending(history)
-                st.subheader("Forecast")
-                st.write(f"Predicted next month spending: ${pred:.2f}")
-                st.line_chart(history + [pred])
-            except Exception as e:
-                st.error(f"Forecast failed: {e}")
+        # if st.button("Forecast (naive)" ): # Forecast button
+        #     try: 
+        #         from models.forecast import forecast_next_month_spending # Import forecasting function
+        #         # Aggregate by month
+        #         df['date'] = pd.to_datetime(df['date'], errors='coerce')
+        #         monthly = df.groupby(df['date'].dt.to_period('M'))['amount'].sum().sort_index()
+        #         history = [float(x) for x in monthly.values]
+        #         pred = forecast_next_month_spending(history)
+        #         st.subheader("Forecast")
+        #         st.write(f"Predicted next month spending: ${pred:.2f}")
+        #         st.line_chart(history + [pred])
+        #     except Exception as e:
+        #         st.error(f"Forecast failed: {e}")
     except Exception as e:
         st.error(f"Could not parse CSV: {e}")
 else:
