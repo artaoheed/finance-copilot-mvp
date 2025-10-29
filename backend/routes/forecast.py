@@ -1,33 +1,39 @@
 # backend/routes/forecast.py
-from fastapi import APIRouter
+
+from fastapi import APIRouter, Query
 from backend.routes.upload import transactions_db
+from models import forecast  # Import your forecast module
 import pandas as pd
-from sklearn.linear_model import LinearRegression
-import numpy as np
 
 router = APIRouter(prefix="/forecast", tags=["Forecast"])
 
-@router.post("")
-def forecast_spending():
+@router.get("")
+def get_forecast_endpoint(method: str = Query("rolling", enum=["rolling", "linear"])):
+    """
+    Forecast next month's spending.
+    - method: "rolling" (default) or "linear"
+
+    Returns:
+        predicted_next_month_amount, historical_months, historical_amounts
+    """
     if not transactions_db:
         return {"error": "No transactions found."}
 
-    df = pd.DataFrame(transactions_db)
-    df["date"] = pd.to_datetime(df["date"])
-    
-    # ✅ Only sum the numeric "amount" column
-    df = df.groupby(df["date"].dt.to_period("M"))["amount"].sum().reset_index()
-    df.rename(columns={"date": "month"}, inplace=True)
-    df["month_idx"] = np.arange(len(df))
+    try:
+        # ✅ Convert the in-memory list of dicts to a DataFrame
+        df = pd.DataFrame(transactions_db)
 
-    model = LinearRegression()
-    model.fit(df[["month_idx"]], df["amount"])
+        # ✅ Run forecast
+        result = forecast.get_forecast(
+            transactions_df=df,
+            method=method
+        )
 
-    next_month = len(df)
-    forecast = model.predict([[next_month]])[0]
+        return {
+            "status": "success",
+            "method": method,
+            **result
+        }
 
-    return {
-        "months": df["month"].astype(str).tolist(),
-        "amounts": df["amount"].tolist(),
-        "forecast_next_month": round(float(forecast), 2)
-    }
+    except Exception as e:
+        return {"error": f"Forecasting failed: {str(e)}"}
