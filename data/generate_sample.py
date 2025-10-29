@@ -7,7 +7,7 @@ import os
 
 # --- Configuration ---
 NUM_MONTHS = random.randint(6, 24)   # Generate 6–24 months of data
-TX_PER_MONTH = random.randint(80, 150)
+TX_PER_MONTH = random.randint(10, 45)
 CURRENCY = "USD"
 
 # Categories and merchants

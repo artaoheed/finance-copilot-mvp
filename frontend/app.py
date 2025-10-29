@@ -43,12 +43,17 @@ if page == "Upload CSV":
             # --- Send file to backend ---
             st.info("⏳ Sending data to backend...")
             try:
-                files = {"file": uploaded_file.getvalue() if hasattr(uploaded_file, "getvalue") else uploaded_file.read()}
-                upload_response = requests.post(f"{BASE_URL}/upload", files={"file": uploaded_file})
+                files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "text/csv")}
+                upload_response = requests.post(f"{BASE_URL}/upload", files=files)
+
                 if upload_response.status_code == 200:
+                    res_json = upload_response.json()
                     st.success("📡 Transactions successfully sent to backend!")
+                    st.session_state.uploaded = True 
+
                 else:
                     st.error(f"Backend upload failed: {upload_response.text}")
+                    
             except Exception as e:
                 st.error(f"❌ Could not send file to backend: {e}")
 
