@@ -109,7 +109,7 @@ def get_forecast(transactions_df, method="rolling"):
         "historical_amounts": monthly["amount"].tolist()
     }
 
-
+---
 ## 📅 Day 5 — Streamlit Frontend MVP
 
 **Goal:**  
