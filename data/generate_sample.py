@@ -74,12 +74,12 @@ def generate_transactions():
     df.sort_values(by="date", inplace=True)
     return df
 
-if __name__ == "__main__":
-    os.makedirs("data", exist_ok=True)
-    df = generate_transactions()
-    output_file = "data/sample_transactions.csv"
-    df.to_csv(output_file, index=False)
-    print(f"✅ Generated {len(df)} transactions over {NUM_MONTHS} months and saved to {output_file}")
+# if __name__ == "__main__":
+#     os.makedirs("data", exist_ok=True)
+#     df = generate_transactions()
+#     output_file = "data/sample_transactions.csv"
+#     df.to_csv(output_file, index=False)
+#     print(f"✅ Generated {len(df)} transactions over {NUM_MONTHS} months and saved to {output_file}")
 
 
 

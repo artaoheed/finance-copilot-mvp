@@ -3,9 +3,28 @@ import streamlit as st
 import pandas as pd
 import requests
 import matplotlib.pyplot as plt
+import hashlib
+
+# --- App Metadata ---
+APP_VERSION = "v1.0.0"
+APP_AUTHOR = "and built with ❤️ by Taoheed Abdulraheem"
+
 
 # --- Backend Base URL ---
 BASE_URL = "http://127.0.0.1:8000"
+
+# --- Cached Functions ---
+@st.cache_data(ttl=600, show_spinner=False)
+def cached_analyze():
+    """Cache the AI analysis response for 10 minutes."""
+    response = requests.post(f"{BASE_URL}/analyze")
+    return response.json()
+
+@st.cache_data(ttl=600, show_spinner=False)
+def cached_forecast(method="rolling"):
+    """Cache the forecast response for 10 minutes."""
+    response = requests.get(f"{BASE_URL}/forecast", params={"method": method})
+    return response.json()
 
 # --- Page Config ---
 st.set_page_config(page_title="💸 Copilot for Personal Finance", layout="wide")
@@ -32,23 +51,16 @@ if page == "Upload CSV":
     uploaded_file = st.file_uploader("Upload your transaction CSV", type=["csv"])
 
     if uploaded_file:
-        
         # --- Check for cached file ---
-        if "last_file_hash" in st.session_state:
-            import hashlib
-            file_hash = hashlib.md5(uploaded_file.getvalue()).hexdigest()
-            if file_hash == st.session_state.last_file_hash:
-                st.info("⚡ Using cached upload (same file as before).")
-                st.session_state.uploaded = True
-                df = st.session_state.df
-                st.dataframe(df.head(10))
-                st.stop()  # Stop re-upload to backend
-            else:
-                st.session_state.last_file_hash = file_hash
+        file_hash = hashlib.md5(uploaded_file.getvalue()).hexdigest()
+        if "last_file_hash" in st.session_state and file_hash == st.session_state.last_file_hash:
+            st.info("⚡ Using cached upload (same file as before).")
+            df = st.session_state.df
+            st.session_state.uploaded = True
+            st.dataframe(df.head(10))
+            st.stop()
         else:
-            import hashlib
-            st.session_state.last_file_hash = hashlib.md5(uploaded_file.getvalue()).hexdigest()
-
+            st.session_state.last_file_hash = file_hash
 
         try:
             df = pd.read_csv(uploaded_file)
@@ -60,20 +72,13 @@ if page == "Upload CSV":
 
             # --- Send file to backend ---
             st.info("⏳ Sending data to backend...")
-            try:
-                files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "text/csv")}
-                upload_response = requests.post(f"{BASE_URL}/upload", files=files)
+            files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "text/csv")}
+            upload_response = requests.post(f"{BASE_URL}/upload", files=files)
 
-                if upload_response.status_code == 200:
-                    res_json = upload_response.json()
-                    st.success("📡 Transactions successfully sent to backend!")
-                    st.session_state.uploaded = True 
-
-                else:
-                    st.error(f"Backend upload failed: {upload_response.text}")
-                    
-            except Exception as e:
-                st.error(f"❌ Could not send file to backend: {e}")
+            if upload_response.status_code == 200:
+                st.success("📡 Transactions successfully sent to backend!")
+            else:
+                st.error(f"Backend upload failed: {upload_response.text}")
 
             # --- Charts ---
             if "date" in df.columns:
@@ -97,7 +102,6 @@ if page == "Upload CSV":
 
         except Exception as e:
             st.error(f"❌ Could not process CSV: {e}")
-
     else:
         st.info("📁 Upload a CSV file to start analyzing your finances.")
 
@@ -112,8 +116,7 @@ elif page == "AI Analysis":
     else:
         if st.button("Run AI Analysis"):
             try:
-                response = requests.post(f"{BASE_URL}/analyze")
-                data = response.json()
+                data = cached_analyze()
                 if "error" in data:
                     st.error(data["error"])
                 else:
@@ -145,15 +148,13 @@ elif page == "Forecast":
         method = st.selectbox("Forecast Method", ["rolling", "linear"])
         if st.button("Run Forecast"):
             try:
-                response = requests.get(f"{BASE_URL}/forecast", params={"method": method})
-                data = response.json()
+                data = cached_forecast(method=method)
                 if "error" in data:
                     st.error(data["error"])
                 else:
                     next_amount = data["predicted_next_month_amount"]
                     st.success(f"💵 Predicted next month spending: **${next_amount:,.2f}**")
 
-                    # Plot forecast data
                     months = pd.to_datetime(data["historical_months"], errors="coerce")
                     amounts = data["historical_amounts"]
 
@@ -173,3 +174,22 @@ elif page == "Forecast":
                     st.pyplot(fig)
             except Exception as e:
                 st.error(f"Forecast failed: {e}")
+from datetime import datetime
+st.caption(f"🕒 Last updated: {datetime.now().strftime('%B %d, %Y %H:%M:%S')}")
+
+
+
+
+# ===========================
+# 🌍 FOOTER (Visible on all pages)
+# ===========================
+st.markdown(
+    """
+    <hr style="margin-top: 40px; margin-bottom: 10px;"/>
+    <div style="text-align: center; color: grey; font-size: 14px;">
+        <p>💸 Copilot for Personal Finance — {version}</p>
+        <p>Developed by <b>{author}</b> | © 2025 All Rights Reserved</p>
+    </div>
+    """.format(version=APP_VERSION, author=APP_AUTHOR),
+    unsafe_allow_html=True
+)
