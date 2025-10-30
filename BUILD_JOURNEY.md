@@ -222,3 +222,68 @@ By the end of Day 5:
 
 > **Milestone:** Reached the *Minimum Viable Product (MVP)* stage — a working, AI-integrated financial assistant.
 
+
+
+## 📅 Day 6 — Integration, Caching & Logging (4–6 hrs)
+
+**Goal:**  
+Polish the integration between the FastAPI backend and the Streamlit frontend, improve performance, and introduce observability (logging + caching) to prepare the system for production-level reliability.
+
+---
+
+### 🧩 Tasks Completed
+
+#### 1️⃣ **Frontend Performance Boost with Caching**
+- Implemented **`@st.cache_data`** in the Streamlit app to cache results for:
+  - AI analysis (`/analyze`)
+  - Forecasting (`/forecast`)
+- Cached data for 10 minutes (`ttl=600`) to prevent unnecessary backend calls.
+- Improved frontend responsiveness — repeated actions now load instantly.
+
+**Code Example**
+```python
+@st.cache_data(ttl=600, show_spinner=False)
+def cached_analyze():
+    response = requests.post(f"{BASE_URL}/analyze")
+    return response.json()
+```
+
+**Backend Logging System**
+```python
+from backend.utils.logger import logger
+logger.info(f"Received {len(records)} transactions in upload route")
+```
+**⚙️ Updated App Structure**
+
+frontend/
+│
+├── app.py                # Main Streamlit dashboard
+├── analyze_app.py        # AI insights page
+├── forecast_app.py       # Forecast visualization
+└── __init__.py
+
+backend/
+│
+├── main.py               # FastAPI entry point
+├── routes/
+│   ├── upload.py
+│   ├── analyze.py
+│   └── forecast.py
+├── ai/
+│   └── llm_client.py
+├── models/
+│   └── forecast.py
+└── utils/
+    └── logger.py
+
+
+**🏁 Outcome**
+By the end of Day 6:
+
+The app became faster, more reliable, and easier to debug.
+
+Frontend caching cut load times dramatically.
+
+Logging and CORS integration prepared the system for real deployment.
+
+Milestone: The project transitioned from a working prototype to a polished, production-ready MVP 🚀
