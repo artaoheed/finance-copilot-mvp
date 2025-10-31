@@ -42,7 +42,15 @@ page = st.sidebar.radio("Go to:", ["Upload CSV", "AI Analysis", "Forecast"])
 
 # --- Header ---
 st.title("💸 Copilot for Personal Finance")
-st.markdown("_An AI-powered assistant that helps you understand and forecast your spending._")
+#st.markdown("_An AI-powered assistant that helps you understand and forecast your spending._")
+
+st.info("""
+**How to use:**
+1. Upload your transaction CSV file (Cash-App style).
+2. View visual breakdowns and spending trends.
+3. Click **“Analyze with AI”** for insights.
+4. Click **“Forecast”** for next-month spending prediction.
+""")
 
 # ===========================
 # 📤 PAGE 1: UPLOAD CSV
@@ -204,13 +212,13 @@ elif page == "Forecast":
 # 🕒 Timestamp + Footer
 # ===========================
 st.caption(f"🕒 Last updated: {datetime.now().strftime('%B %d, %Y %H:%M:%S')}")
-st.markdown(
-    f"""
-    <hr style="margin-top: 40px; margin-bottom: 10px;"/>
-    <div style="text-align: center; color: grey; font-size: 14px;">
-        <p>💸 Copilot for Personal Finance — {APP_VERSION}</p>
-        <p>Developed by <b>{APP_AUTHOR}</b> | © 2025 All Rights Reserved</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+with st.sidebar.expander("ℹ️ About this App"):
+    st.markdown("""
+    **💸 Copilot for Personal Finance**
+
+    Built by [Taoheed Abdulraheem](#)  
+    Empowering individuals to understand and optimize spending using AI.
+
+    **Tech stack:** FastAPI · Streamlit · Gemini · OpenAI · Scikit-Learn  
+    **Version:** 1.1.0
+    """)
