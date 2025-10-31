@@ -12,7 +12,7 @@ APP_VERSION = "v1.1.0"
 APP_AUTHOR = "and built with ❤️ by Taoheed Abdulraheem"
 
 # --- Backend Base URL ---
-BASE_URL = "http://127.0.0.1:8000"
+BASE_URL = "https://finance-copilot.up.railway.app"
 
 # --- Cached Functions ---
 @st.cache_data(ttl=600, show_spinner=False)
