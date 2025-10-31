@@ -11,7 +11,7 @@ _An AI-powered financial assistant that helps users understand spending, get AI-
 
 ## 🌍 Live Demo  
 
-- **Frontend (Streamlit):** [https://finance-copilot.streamlit.app](https://finance-copilot.streamlit.app)  
+- **Frontend (Streamlit):** [https://artaoheed-finance-copilot-mvp-frontendapp-ywqu7m.streamlit.app/](https://artaoheed-finance-copilot-mvp-frontendapp-ywqu7m.streamlit.app/)  
 - **Backend (FastAPI):** [https://finance-copilot.up.railway.app/docs](https://finance-copilot.up.railway.app/docs)  
 
 ---
@@ -155,3 +155,90 @@ CORS_ORIGINS=http://localhost:8501,https://finance-copilot.streamlit.app
 ```
 
 ## 🧱 Build Journey
+
+🗓 Timeline:
+
+Week 1: Backend setup, ML forecast models, and AI analysis pipeline
+
+Week 2: Streamlit frontend, charting, caching, and full deployment
+
+💡 Copilot & Cursor Assistance:
+Used to generate scaffolding for FastAPI routes, LLM integration boilerplate, and testing utilities (e.g., llm_client.py, forecast.py).
+
+⚙️ Challenges & Fixes:
+
+CORS configuration → resolved with CORSMiddleware
+
+Missing python-multipart → added to requirements.txt
+
+JSON parsing in LLM responses → implemented fallback parser
+
+Full build log in BUILD_JOURNEY.md
+
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — you are free to use, modify, and distribute it as long as attribution is preserved.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+If you'd like to improve this project:
+
+1. **Fork** this repository  
+2. Create a new branch: `git checkout -b feature/your-feature-name`  
+3. Make your changes and commit: `git commit -m "Add some feature"`  
+4. Push to your branch: `git push origin feature/your-feature-name`  
+5. Open a **Pull Request** 🚀  
+
+Please follow TODOs, formatting style, and keep commits clean.
+
+If you're reporting a bug, include:
+
+- ✅ Steps to reproduce  
+- ✅ Expected vs actual behavior  
+- ✅ Screenshots or logs when helpful  
+
+---
+
+## 👨‍💻 Author
+
+**Taoheed Abdulraheem**  
+ML Advocate • AI Builder • Community Manager • Tech Educator  
+
+🌐 **Portfolio:** _coming soon_  
+🐙 **GitHub:** https://github.com/artaoheed  
+🔗 **LinkedIn:** https://linkedin.com/in/artaoheed  
+🐤 **X / Twitter:** https://x.com/artaoheed 
+
+If this project helped you, consider giving it a ⭐ on GitHub!
+
+---
+
+## 🚀 Summary
+
+> **Copilot for Personal Finance** is a full-stack AI-powered web app that combines FastAPI, Streamlit, machine learning, and LLMs to give users financial insight, spending forecasts, and clean UI visualizations — all built in **14 days** as a portfolio project.
+
+✅ Upload CSV → stored & validated  
+✅ AI LLM insight (Gemini/OpenAI)  
+✅ ML spending forecast (Linear Regression + Rolling Avg)  
+✅ Deployed live: backend on Railway, frontend on Streamlit  
+✅ Fully documented + tested  
+
+This project demonstrates:
+
+| Skill Area | Proof |
+|------------|-------|
+| Full-stack development | FastAPI backend + Streamlit frontend |
+| AI engineering | LLM wrapper + JSON structured outputs |
+| Machine learning | Forecast modeling with Scikit-Learn |
+| DevOps & deployment | Cloud deployment, env config, CORS, caching |
+| Software engineering | Tests, logging, versioning, modular app design |
+| Product thinking | Clear UX, privacy safeguards, mobile-friendly UI |
+
+---
+
