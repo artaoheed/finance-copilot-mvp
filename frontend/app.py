@@ -217,7 +217,7 @@ with st.sidebar.expander(" A little about this App"):
     **💸 Copilot for Personal Finance**
 
     Built by [Taoheed Abdulraheem](#)  
-    Empowering individuals to understand and optimize spending using AI.
+    Empowering individuals to understand and optimize spending using AI, ML for forecasting and LLM for insights/advice.
 
     **Tech stack:** FastAPI · Streamlit · Gemini · OpenAI · Scikit-Learn  
     **Version:** 1.1.0
