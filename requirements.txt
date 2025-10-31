@@ -6,6 +6,7 @@ numpy
 scikit-learn
 openai
 python-dotenv
+python-multipart
 
 # Frontend
 streamlit
