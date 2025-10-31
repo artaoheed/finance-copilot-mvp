@@ -212,7 +212,7 @@ elif page == "Forecast":
 # 🕒 Timestamp + Footer
 # ===========================
 st.caption(f"🕒 Last updated: {datetime.now().strftime('%B %d, %Y %H:%M:%S')}")
-with st.sidebar.expander("ℹ️ About this App"):
+with st.sidebar.expander(" A little about this App"):
     st.markdown("""
     **💸 Copilot for Personal Finance**
 
