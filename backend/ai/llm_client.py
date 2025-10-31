@@ -99,7 +99,14 @@ def analyze_transactions_with_llm(transactions: List[Dict[str, Any]]) -> Dict[st
     """
 
     prompt = f"""
-You are a financial analyst. Analyze this transaction list:
+You are a financial analyst.
+
+Analyze the following transaction data **while ensuring user privacy**.
+If you encounter any names, merchant IDs, or personal identifiers, replace them with [REDACTED].
+
+Do NOT output any user-identifiable strings in your response.
+
+Transactions:
 {json.dumps(transactions[:100], indent=2)}
 
 Return a JSON with this structure only:

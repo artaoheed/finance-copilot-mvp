@@ -4,11 +4,12 @@ import pandas as pd
 import requests
 import matplotlib.pyplot as plt
 import hashlib
+import plotly.express as px
+from datetime import datetime
 
 # --- App Metadata ---
-APP_VERSION = "v1.0.0"
+APP_VERSION = "v1.1.0"
 APP_AUTHOR = "and built with ❤️ by Taoheed Abdulraheem"
-
 
 # --- Backend Base URL ---
 BASE_URL = "http://127.0.0.1:8000"
@@ -64,6 +65,17 @@ if page == "Upload CSV":
 
         try:
             df = pd.read_csv(uploaded_file)
+
+            # ✅ Validate required columns
+            required_cols = {"date", "amount", "category"}
+            if not required_cols.issubset(df.columns):
+                st.error(f"❌ Missing required columns. Expected: {', '.join(required_cols)}")
+                st.stop()
+
+            # ✅ Simulate data sanitization preview
+            df["description"] = df["description"].astype(str).str.replace(r"\d{10,}", "[NUM]", regex=True)
+            df["description"] = df["description"].apply(lambda x: x[:60] + "..." if len(x) > 60 else x)
+
             st.session_state.df = df
             st.session_state.uploaded = True
 
@@ -80,25 +92,35 @@ if page == "Upload CSV":
             else:
                 st.error(f"Backend upload failed: {upload_response.text}")
 
-            # --- Charts ---
+            # --- Interactive Plotly Charts ---
             if "date" in df.columns:
                 df["date"] = pd.to_datetime(df["date"], errors="coerce")
                 monthly = df.groupby(df["date"].dt.to_period("M"))["amount"].sum().reset_index()
                 monthly["month"] = monthly["date"].dt.to_timestamp()
 
                 st.markdown("### 📈 Monthly Spending Trend")
-                fig, ax = plt.subplots()
-                ax.plot(monthly["month"], monthly["amount"], marker="o", color="blue")
-                ax.set_xlabel("Month")
-                ax.set_ylabel("Total Spending ($)")
-                ax.set_title("Monthly Spending Trend")
-                plt.xticks(rotation=45)
-                st.pyplot(fig)
+                fig = px.line(
+                    monthly,
+                    x="month",
+                    y="amount",
+                    title="Monthly Spending Trend",
+                    markers=True,
+                    color_discrete_sequence=["#1f77b4"]
+                )
+                fig.update_layout(xaxis_title="Month", yaxis_title="Total Spending ($)")
+                st.plotly_chart(fig, use_container_width=True)
 
             if "category" in df.columns:
-                cat = df.groupby("category")["amount"].sum().sort_values(ascending=False)
-                st.markdown("### 🥧 Spending by Category")
-                st.bar_chart(cat)
+                st.markdown("### 🧩 Spending Breakdown by Category")
+                fig = px.treemap(
+                    df,
+                    path=["category"],
+                    values="amount",
+                    title="Spending by Category",
+                    color="amount",
+                    color_continuous_scale="Blues"
+                )
+                st.plotly_chart(fig, use_container_width=True)
 
         except Exception as e:
             st.error(f"❌ Could not process CSV: {e}")
@@ -158,38 +180,37 @@ elif page == "Forecast":
                     months = pd.to_datetime(data["historical_months"], errors="coerce")
                     amounts = data["historical_amounts"]
 
-                    fig, ax = plt.subplots()
-                    ax.plot(months, amounts, marker="o", label="Historical")
-                    ax.scatter(
-                        months.max() + pd.DateOffset(months=1),
-                        next_amount,
-                        color="red",
-                        label="Forecast"
+                    fig = px.line(
+                        x=months,
+                        y=amounts,
+                        markers=True,
+                        title="Forecasted Spending Trend",
+                        labels={"x": "Month", "y": "Spending ($)"}
                     )
-                    ax.axhline(y=next_amount, color="red", linestyle="--", alpha=0.6)
-                    ax.set_xlabel("Month")
-                    ax.set_ylabel("Spending ($)")
-                    ax.legend()
-                    plt.xticks(rotation=45)
-                    st.pyplot(fig)
+                    fig.add_scatter(
+                        x=[months.max() + pd.DateOffset(months=1)],
+                        y=[next_amount],
+                        mode="markers+text",
+                        name="Forecast",
+                        text=["Next Month"],
+                        textposition="top center",
+                        marker=dict(color="red", size=10)
+                    )
+                    st.plotly_chart(fig, use_container_width=True)
             except Exception as e:
                 st.error(f"Forecast failed: {e}")
-from datetime import datetime
+
+# ===========================
+# 🕒 Timestamp + Footer
+# ===========================
 st.caption(f"🕒 Last updated: {datetime.now().strftime('%B %d, %Y %H:%M:%S')}")
-
-
-
-
-# ===========================
-# 🌍 FOOTER (Visible on all pages)
-# ===========================
 st.markdown(
-    """
+    f"""
     <hr style="margin-top: 40px; margin-bottom: 10px;"/>
     <div style="text-align: center; color: grey; font-size: 14px;">
-        <p>💸 Copilot for Personal Finance — {version}</p>
-        <p>Developed by <b>{author}</b> | © 2025 All Rights Reserved</p>
+        <p>💸 Copilot for Personal Finance — {APP_VERSION}</p>
+        <p>Developed by <b>{APP_AUTHOR}</b> | © 2025 All Rights Reserved</p>
     </div>
-    """.format(version=APP_VERSION, author=APP_AUTHOR),
+    """,
     unsafe_allow_html=True
 )
