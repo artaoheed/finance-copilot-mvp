@@ -9,7 +9,7 @@ from datetime import datetime
 
 # --- App Metadata ---
 APP_VERSION = "v1.1.0"
-APP_AUTHOR = "and built with ❤️ by Taoheed Abdulraheem"
+APP_AUTHOR = "and built with ❤️ by Taoheed A. Abdulraheem"
 
 # --- Backend Base URL ---
 BASE_URL = "https://finance-copilot.up.railway.app"
@@ -213,6 +213,7 @@ elif page == "Forecast":
 # ===========================
 st.caption(f"🕒 Last updated: {datetime.now().strftime('%B %d, %Y %H:%M:%S')}")
 with st.sidebar.expander(" A little about this App"):
+
     st.markdown("""
     **💸 Copilot for Personal Finance**
 
